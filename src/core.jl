@@ -17,6 +17,7 @@ include("grad.jl")
 include("compile.jl")
 include("update.jl")
 include("transform.jl")
+include("onnx/onnx.jl")
 include("cuda.jl")
 
 
