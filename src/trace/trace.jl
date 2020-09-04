@@ -26,6 +26,9 @@ function module_functions(modl)
     return res
 end
 
+
+# TODO: this accounts to a significant part of loading time
+#       we need to speed it up
 const PRIMITIVES = Set{Any}(vcat(
     module_functions(Base),
     module_functions(Core),
