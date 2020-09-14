@@ -27,8 +27,12 @@ function module_functions(modl)
 end
 
 
-# TODO: this accounts to a significant part of loading time
-#       we need to speed it up
+# TODO: this accounts to a significant part of loading time.
+# Most of this time is taken by Set(long-function-list),
+# maybe because of long calculation of function hash,
+# maybe for another reason. Anyway, I don't see a quick and
+# reliable way to fix it right now, so let's come back
+# to this later
 const PRIMITIVES = Set{Any}(vcat(
     module_functions(Base),
     module_functions(Core),
